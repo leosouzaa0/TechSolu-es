@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c3164">
+  <title>TechSoluções</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="access" aria-label="Acesso à conta">
+      <div class="card">
+        <img class="brand" src="imagens/logo.png" alt="TechSoluções">
+        <section id="login" class="screen">
+          <span class="step">ACESSO À CONTA</span>
+          <h2>Bem-vindo!</h2>
+          <p class="description">Digite seu CPF e sua senha para entrar.</p>
+          <div class="form-fields" id="login-form">
+            <label for="login-cpf">CPF</label>
+            <input id="login-cpf" name="cpf" type="text" inputmode="numeric" autocomplete="username" placeholder="000.000.000-00" maxlength="14" required>
+            <label for="login-password">Senha</label>
+            <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Digite sua senha" required>
+            <a class="text-link forgot" href="#recover">Esqueceu sua senha?</a>
+            <a class="primary button-link" href="home.html">Entrar</a>
+          </div>
+          <p class="switch">Ainda não tem uma conta? <a class="text-link" href="#register">Cadastre-se</a></p>
+        </section>
+        <section id="register" class="screen">
+          <span class="step">CRIAR CONTA</span>
+          <h2>Faça seu cadastro</h2>
+          <p class="description">Preencha seus dados para criar uma conta.</p>
+          <div class="form-fields" id="register-form">
+            <label for="register-name">Nome completo</label>
+            <input id="register-name" name="name" autocomplete="name" placeholder="Seu nome completo" required minlength="2">
+            <label for="register-cpf">CPF</label>
+            <input id="register-cpf" name="cpf" inputmode="numeric" autocomplete="username" placeholder="000.000.000-00" maxlength="14" required>
+            <label for="register-password">Senha</label>
+            <input id="register-password" name="password" type="password" autocomplete="new-password" placeholder="Pelo menos 6 caracteres" minlength="6" required>
+            <label for="register-confirm">Confirmar senha</label>
+            <input id="register-confirm" name="confirm" type="password" autocomplete="new-password" placeholder="Digite a senha novamente" required>
+            <a class="primary button-link" href="#registered">Cadastrar</a>
+          </div>
+          <p class="switch">Já tem uma conta? <a class="text-link" href="#login">Voltar ao login</a></p>
+        </section>
+        <section id="registered" class="screen">
+          <span class="step">DEMONSTRAÇÃO DO CADASTRO</span>
+          <div class="success-icon" aria-hidden="true">✓</div>
+          <h2>Cadastro apresentado!</h2>
+          <p class="description">Guarde este código de 4 dígitos. Use-o para avançar pela recuperação de senha nesta demonstração.</p>
+          <div class="code-box"><span>SEU CÓDIGO DE RECUPERAÇÃO</span><strong id="recovery-code">4827</strong></div>
+          <p class="note">Anote o código em um lugar seguro. Use este código na tela de recuperação desta demonstração.</p>
+          <a class="primary button-link" href="#login">Ir para o login</a>
+        </section>
+        <section id="recover" class="screen">
+          <span class="step">RECUPERAR SENHA · ETAPA 1 DE 2</span>
+          <h2>Esqueceu sua senha?</h2>
+          <p class="description">Informe seu CPF e o código de 4 dígitos mostrado no cadastro. Nesta demonstração, o código é 4827.</p>
+          <div class="form-fields" id="recover-form">
+            <label for="recover-cpf">CPF</label>
+            <input id="recover-cpf" name="cpf" inputmode="numeric" autocomplete="username" placeholder="000.000.000-00" maxlength="14" required>
+            <label for="recover-code">Código de recuperação</label>
+            <input id="recover-code" name="code" inputmode="numeric"  maxlength="4" placeholder="4 dígitos" required>
+            <a class="primary button-link" href="#reset">Continuar</a>
+          </div>
+          <p class="switch"><a class="text-link" href="#login">Voltar ao login</a></p>
+        </section>
+        <section id="reset" class="screen">
+          <span class="step">RECUPERAR SENHA · ETAPA 2 DE 2</span>
+          <h2>Crie uma nova senha</h2>
+          <p class="description">Digite e confirme a senha que deseja usar.</p>
+          <div class="form-fields" id="reset-form">
+            <label for="reset-password">Nova senha</label>
+            <input id="reset-password" name="password" type="password" autocomplete="new-password" placeholder="Pelo menos 6 caracteres" minlength="6" required>
+            <label for="reset-confirm">Confirmar nova senha</label>
+            <input id="reset-confirm" name="confirm" type="password" autocomplete="new-password" placeholder="Digite a nova senha novamente" required>
+            <a class="primary button-link" href="#login">Voltar ao login</a>
+          </div>
+          <p class="switch"><a class="text-link" href="#recover">Voltar</a></p>
+        </section>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>
